@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(29, 28, 28);
 }
 
 .App {
@@ -21,6 +21,10 @@ body {
   box-sizing: border-box;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
+}
+
+.main-list {
+  background-color: rgb(44, 44, 44);
 }
 
 .main-list-header {
@@ -39,5 +43,6 @@ body {
 .ticket-list-element {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid black;
   color: rgb(194, 194, 194);
 }
