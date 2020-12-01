@@ -11,6 +11,7 @@ body {
 .App {
   width: 100%;
   box-sizing: border-box;
+  padding: 20px;
 }
 
 .main-wrapper {
@@ -23,10 +24,12 @@ body {
   color: rgb(194, 194, 194);
   font-size: 22px;
   width: 100%;
-  margin: 10px;
+  padding: 20px 0px 5px 10px;
+  margin: 10px 0;
   box-sizing: border-box;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
+  border-bottom: 5px solid rgb(60, 0, 129);
 }
 
 .main-list {
@@ -34,6 +37,11 @@ body {
   max-width: 400px;
   width: 100%;
   margin: 5px;
+  padding: 15px;
+}
+
+.find-bar {
+  background-color: rgb(29, 28, 28);
 }
 
 .main-list-header {

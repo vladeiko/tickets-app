@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { importList } from "../actions/index";
 import Ticket from "./Ticket";
+import FindBar from "./FindBar";
 
 const TicketList = () => {
   const dispatch = useDispatch();
@@ -19,14 +20,13 @@ const TicketList = () => {
 
   return (
     <div className="main-list">
-      {/* find-bar */}
+      <FindBar />
       <div className="main-list-header">
         <div className="header-text">OWNER</div>
         <div className="header-text">REPORTED</div>
         <div className="header-text">ASSET</div>
         <div className="header-text">STATUS</div>
       </div>
-      {/* List of elements */}
       <div className="tickets-list">
         {list ? (
           list.map((ticket) => <Ticket ticket={ticket} key={ticket.ticketId} />)
