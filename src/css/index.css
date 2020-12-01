@@ -17,3 +17,11 @@ body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
 }
+
+.main-list-header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: rgb(194, 194, 194);
+  border-bottom: 1px solid black;
+}
