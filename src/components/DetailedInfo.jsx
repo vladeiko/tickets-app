@@ -20,6 +20,18 @@ const DetailedInfo = (props) => {
               LAST UPDATED {currentTicket.lastUpdatedTime}
             </div>
           </div>
+
+          <div className="info-block">
+            <div className="info-block__title">Owner</div>
+          </div>
+
+          <div className="info-block">
+            <div className="info-block__title">Details</div>
+          </div>
+
+          <div className="info-block">
+            <div className="info-block__title">Asset</div>
+          </div>
         </div>
       ) : (
         <Err404 />

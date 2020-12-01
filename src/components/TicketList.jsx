@@ -22,7 +22,7 @@ const TicketList = () => {
     <div className="main-list">
       <FindBar />
       <div className="tickets-list">
-        <div className="ticket-list-element">
+        <div className="main-list-header">
           <div className="header-text">OWNER</div>
           <div className="header-text">REPORTED</div>
           <div className="header-text">ASSET</div>
