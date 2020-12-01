@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Ticket = ({ ticket }) => {
   return (
-    <div className="ticket-list-element" key={ticket.ticketId}>
-      <div className="user-avatar">
-        <img src={ticket.owner.avatar} className="avatar" />
+    <Link to={"/" + ticket.ticketId}>
+      <div className="ticket-list-element" key={ticket.ticketId}>
+        <div className="user-avatar">
+          <img src={ticket.owner.avatar} className="avatar" />
+        </div>
+        <div className="reported">{ticket.reportedTime}</div>
+        <div className="asset">{ticket.asset.name}</div>
+        <div className="status">STA</div>
       </div>
-      <div className="reported">{ticket.reportedTime}</div>
-      <div className="asset">{ticket.asset.name}</div>
-      <div className="status">STA</div>
-    </div>
+    </Link>
   );
 };
 

@@ -10,14 +10,11 @@ const DetailedInfo = (props) => {
   return (
     <div className="detailed-info-container">
       {currentTicket ? (
-        <div>
+        <div className="detailed-info">
           <div className="ticket-num">TICKET NO. {currentTicket.number}</div>
           <div className="last-updated">
             LAST UPDATED {currentTicket.lastUpdatedTime}
           </div>
-          <div className="info-container"></div>
-          <div className="info-container"></div>
-          <div className="info-container"></div>
         </div>
       ) : null}
     </div>
