@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Err404 from "./404";
 
 const DetailedInfo = (props) => {
   const ticketList = useSelector((state) => state.ticketsReducer.tickets);
@@ -17,11 +17,7 @@ const DetailedInfo = (props) => {
           </div>
         </div>
       ) : (
-        <div className="detailed-info-container">
-          <div className="detailed-info">
-            <div className="no-selected">No ticket selected</div>
-          </div>
-        </div>
+        <Err404 />
       )}
     </div>
   );

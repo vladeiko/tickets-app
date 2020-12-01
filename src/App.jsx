@@ -10,8 +10,8 @@ function App() {
         <Header />
         <div className="main-wrapper">
           <TicketList />
-          <Route path="/:ticketId" component={DetailedInfo} />
-          <Route path="/" component={DetailedInfo} />
+          <Route path="/tickets/:ticketId" component={DetailedInfo} />
+          <Route exact path="/" component={DetailedInfo} />
         </div>
       </div>
     </BrowserRouter>

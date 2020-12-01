@@ -68,3 +68,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.no-selected {
+  text-align: center;
+  width: 100%;
+  margin: 290px 0;
+}

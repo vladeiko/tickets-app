@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Ticket = ({ ticket }) => {
   return (
-    <Link to={"/" + ticket.ticketId}>
+    <Link to={"/tickets/" + ticket.ticketId}>
       <div className="ticket-list-element" key={ticket.ticketId}>
         <div className="user-avatar">
           <img src={ticket.owner.avatar} className="avatar" />
