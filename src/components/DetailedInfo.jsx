@@ -16,7 +16,13 @@ const DetailedInfo = (props) => {
             LAST UPDATED {currentTicket.lastUpdatedTime}
           </div>
         </div>
-      ) : null}
+      ) : (
+        <div className="detailed-info-container">
+          <div className="detailed-info">
+            <div className="no-selected">No ticket selected</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

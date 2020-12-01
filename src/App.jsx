@@ -11,6 +11,7 @@ function App() {
         <div className="main-wrapper">
           <TicketList />
           <Route path="/:ticketId" component={DetailedInfo} />
+          <Route path="/" component={DetailedInfo} />
         </div>
       </div>
     </BrowserRouter>
