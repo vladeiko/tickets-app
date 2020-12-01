@@ -11,9 +11,14 @@ const DetailedInfo = (props) => {
     <div className="detailed-info-container">
       {currentTicket ? (
         <div className="detailed-info">
-          <div className="ticket-num">TICKET NO. {currentTicket.number}</div>
-          <div className="last-updated">
-            LAST UPDATED {currentTicket.lastUpdatedTime}
+          <div className="detailed-info__header">
+            <div className="ticket-num">
+              TICKET NO.
+              <span className="span-text">{currentTicket.number}</span>
+            </div>
+            <div className="updated-date">
+              LAST UPDATED {currentTicket.lastUpdatedTime}
+            </div>
           </div>
         </div>
       ) : (

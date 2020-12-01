@@ -31,8 +31,9 @@ body {
 
 .main-list {
   background-color: rgb(44, 44, 44);
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
+  margin: 5px;
 }
 
 .main-list-header {
@@ -45,10 +46,12 @@ body {
 
 .avatar {
   border-radius: 50%;
-  max-width: 50px;
+  max-width: 40px;
 }
 
-a {
+a,
+a:visited {
+  color: rgb(194, 194, 194);
   text-decoration: none;
 }
 
@@ -60,6 +63,8 @@ a {
 }
 
 .detailed-info-container {
+  background-color: rgb(44, 44, 44);
+  margin: 5px 5px 5px 20px;
   color: rgb(194, 194, 194);
   width: 100%;
 }
@@ -67,6 +72,27 @@ a {
 .detailed-info {
   display: flex;
   justify-content: space-between;
+}
+
+.detailed-info__header {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px 20px;
+}
+
+.ticket-num {
+  color: rgb(110, 110, 110);
+}
+
+.span-text {
+  color: rgb(194, 194, 194);
+  padding: 10px;
+}
+
+.updated-date {
+  color: rgb(110, 110, 110);
 }
 
 .no-selected {
