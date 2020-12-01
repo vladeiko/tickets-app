@@ -8,8 +8,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <TicketList />
-        <Route path="/:ticketId" component={DetailedInfo} />
+        <div className="main-wrapper">
+          <TicketList />
+          <Route path="/:ticketId" component={DetailedInfo} />
+        </div>
       </div>
     </BrowserRouter>
   );
