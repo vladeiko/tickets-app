@@ -29,7 +29,7 @@ const TicketList = () => {
       {/* List of elements */}
       <div className="tickets-list">
         {list ? (
-          list.map((ticket) => <Ticket ticket={ticket} />)
+          list.map((ticket) => <Ticket ticket={ticket} key={ticket.ticketId} />)
         ) : (
           <div>No items</div>
         )}
