@@ -120,14 +120,27 @@ a:visited {
 }
 
 .ticket-list-element {
-  text-align: center;
+  text-align: left;
   display: flex;
   background-color: rgb(44, 44, 44);
   padding: 5px 10px;
   justify-content: space-between;
+  align-items: center;
   border-top: 2px solid black;
   color: rgb(194, 194, 194);
 }
+
+/* .user-avatar {
+  padding: 0 10px;
+}
+
+.reported {
+  padding: 0 50px;
+}
+
+.asset {
+  padding: 0 20px;
+} */
 
 .selected {
   background-color: rgb(85, 85, 85);
