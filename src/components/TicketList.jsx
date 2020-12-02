@@ -10,12 +10,11 @@ const TicketList = () => {
 
   const list = useSelector((state) => state.ticketsReducer.tickets);
 
-  useEffect(() => {
-    axios
-      .get(
-        "https://raw.githubusercontent.com/Tapify/public-code-test/master/web-ui-test/tickets.json"
-      )
-      .then((res) => dispatch(importList(res.data)));
+  useEffect(async () => {
+    const { data } = await axios.get(
+      "https://raw.githubusercontent.com/Tapify/public-code-test/master/web-ui-test/tickets.json"
+    );
+    dispatch(importList(data));
   }, []);
 
   return (
