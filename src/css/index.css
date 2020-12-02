@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(29, 28, 28);
@@ -53,7 +53,7 @@ html {
   padding: 0px 0px 5px 10px;
   margin: 0 0 10px 0;
   box-sizing: border-box;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Times New Roman", Times, serif, sans-serif;
   font-weight: bold;
   border-bottom: 5px solid rgb(60, 0, 129);
   /* height: 100%; */
@@ -110,7 +110,8 @@ html {
 
 .avatar {
   border-radius: 50%;
-  max-width: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 a,
@@ -153,6 +154,7 @@ a:visited {
   color: rgb(194, 194, 194);
   min-width: 600px;
   width: 100%;
+  height: calc(100vh - 100px);
 }
 
 .detailed-info__header {
@@ -200,7 +202,8 @@ a:visited {
 
 .info-ava {
   border-radius: 50%;
-  max-width: 60px;
+  width: 70px;
+  height: 70px;
 }
 
 .owner-description {
