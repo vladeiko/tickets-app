@@ -9,6 +9,13 @@ const TicketList = () => {
   const dispatch = useDispatch();
 
   const list = useSelector((state) => state.ticketsReducer.tickets);
+  const filter = useSelector((state) => state.filterReducer);
+
+  const currentList = list.filter((ticket) =>
+    (ticket.owner.firstName + " " + ticket.owner.lastName).includes(filter)
+  );
+
+  console.log(currentList);
 
   useEffect(async () => {
     const { data } = await axios.get(
@@ -27,8 +34,10 @@ const TicketList = () => {
           <div className="header-text">ASSET</div>
           <div className="header-text">STATUS</div>
         </div>
-        {list ? (
-          list.map((ticket) => <Ticket ticket={ticket} key={ticket.ticketId} />)
+        {currentList ? (
+          currentList.map((ticket) => (
+            <Ticket ticket={ticket} key={ticket.ticketId} />
+          ))
         ) : (
           <div>No items</div>
         )}
