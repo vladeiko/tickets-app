@@ -15,8 +15,6 @@ const TicketList = () => {
     (ticket.owner.firstName + " " + ticket.owner.lastName).includes(filter)
   );
 
-  console.log(currentList);
-
   useEffect(async () => {
     const { data } = await axios.get(
       "https://raw.githubusercontent.com/Tapify/public-code-test/master/web-ui-test/tickets.json"

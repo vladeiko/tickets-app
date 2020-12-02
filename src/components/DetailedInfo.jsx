@@ -3,9 +3,24 @@ import Err404 from "./404";
 
 const DetailedInfo = (props) => {
   const ticketList = useSelector((state) => state.ticketsReducer.tickets);
-  let currentTicket = ticketList.find(
-    (item) => item.ticketId.toString() === props.match.params.ticketId
-  );
+
+  const currentTicket = ticketList
+    ? ticketList.find(
+        (item) => item.ticketId.toString() === props.match.params.ticketId
+      )
+    : null;
+
+  const status = () => {
+    if (currentTicket.status === "assigned") return "ASD";
+
+    if (currentTicket.status === "unassigned") return "UNA";
+
+    if (currentTicket.status === "completed") return "COM";
+  };
+
+  // const lastUpdatedTime = new Date(
+  //   currentTicket.lastUpdatedTime
+  // ).toLocaleString("en-GB");
 
   return (
     <div className="detailed-info-container">
@@ -17,7 +32,8 @@ const DetailedInfo = (props) => {
               <span className="span-text">{currentTicket.number}</span>
             </div>
             <div className="updated-date">
-              LAST UPDATED {currentTicket.lastUpdatedTime}
+              LAST UPDATED{" "}
+              {new Date(currentTicket.lastUpdatedTime).toLocaleString("en-GB")}
             </div>
           </div>
 
@@ -42,11 +58,13 @@ const DetailedInfo = (props) => {
             <div className="info-block__title">Details</div>
             <div className="info-part">
               <div className="dark-grey-text">Reported</div>
-              <div className="grey-text">{currentTicket.reportedTime}</div>
+              <div className="grey-text">
+                {new Date(currentTicket.reportedTime).toLocaleString("en-GB")}
+              </div>
             </div>
             <div className="info-part">
               <div className="dark-grey-text">Status</div>
-              <div className="grey-text">{currentTicket.status}</div>
+              <div className="grey-text">{status()}</div>
             </div>
             <div className="info-part">
               <div className="dark-grey-text">Description</div>

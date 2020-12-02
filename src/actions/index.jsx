@@ -18,3 +18,10 @@ export const setFilter = (value) => {
     payload: value,
   };
 };
+
+export const toggleStatus = (value) => {
+  return {
+    type: "ToggleStatus",
+    payload: value,
+  };
+};

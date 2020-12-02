@@ -128,6 +128,11 @@ a:visited {
   color: rgb(194, 194, 194);
 }
 
+.selected {
+  background-color: rgb(85, 85, 85);
+  border-left: 4px solid rgb(60, 0, 129);
+}
+
 .detailed-info-container {
   background-color: rgb(44, 44, 44);
   margin: 5px 0px 5px 20px;
