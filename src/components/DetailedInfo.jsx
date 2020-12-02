@@ -64,7 +64,7 @@ const DetailedInfo = (props) => {
             </div>
             <div className="info-part">
               <div className="dark-grey-text">Status</div>
-              <div className="grey-text">{status()}</div>
+              <div className={"status " + currentTicket.status}>{status()}</div>
             </div>
             <div className="info-part">
               <div className="dark-grey-text">Description</div>
@@ -85,8 +85,8 @@ const DetailedInfo = (props) => {
             <div className="info-part">
               <div className="dark-grey-text">Location</div>
               <div className="grey-text">
-                <span className="location">{currentTicket.asset.kmFrom}</span>
-                <span className="location">{currentTicket.asset.kmTo}</span>
+                <p className="location">{currentTicket.asset.kmFrom}</p>
+                <p className="location">{currentTicket.asset.kmTo}</p>
               </div>
             </div>
           </div>
