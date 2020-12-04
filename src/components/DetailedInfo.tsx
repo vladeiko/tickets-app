@@ -1,10 +1,13 @@
 import { useSelector } from "react-redux";
+import { TicketType } from "../types/types";
 import Err404 from "./404";
 
 const DetailedInfo = (props: any) => {
-  const ticketList = useSelector((state: any) => state.ticketsReducer.tickets);
+  const ticketList: [TicketType?] = useSelector(
+    (state: any) => state.ticketsReducer.tickets
+  );
 
-  const currentTicket = ticketList
+  const currentTicket: TicketType = ticketList
     ? ticketList.find(
         (item: any) => item.ticketId.toString() === props.match.params.ticketId
       )
@@ -40,7 +43,11 @@ const DetailedInfo = (props: any) => {
           <div className="info-block">
             <div className="info-block__title">Owner</div>
             <div className="info-container">
-              <img className="info-ava" src={currentTicket.owner.avatar}></img>
+              <img
+                className="info-ava"
+                src={currentTicket.owner.avatar}
+                alt="#"
+              ></img>
               <div className="owner-description">
                 <div className="text-grey">
                   {currentTicket.owner.firstName +

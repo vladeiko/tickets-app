@@ -5,6 +5,7 @@
     "allowJs": true,
     "jsx": "react-native",
     "strict": true,
+    "strictNullChecks": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

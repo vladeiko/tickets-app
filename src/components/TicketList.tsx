@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { importList } from "../actions/index";
 import Ticket from "./Ticket";
 import FindBar from "./FindBar";
+import { TicketType } from "../types/types";
 
 const TicketList = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const TicketList = () => {
   const list = useSelector((state: any) => state.ticketsReducer.tickets);
   const filter = useSelector((state: any) => state.filterReducer);
 
-  const currentList = list.filter((ticket: any) =>
+  const currentList = list.filter((ticket: TicketType) =>
     (ticket.owner.firstName + " " + ticket.owner.lastName).includes(filter)
   );
 
@@ -34,7 +35,7 @@ const TicketList = () => {
           <div className="header-text">STATUS</div>
         </div>
         {currentList ? (
-          currentList.map((ticket: any) => (
+          currentList.map((ticket: TicketType) => (
             <Ticket ticket={ticket} key={ticket.ticketId} />
           ))
         ) : (

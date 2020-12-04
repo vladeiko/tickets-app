@@ -1,4 +1,4 @@
-const inputReducer = (state = "", action: any) => {
+const inputReducer = (state: string = "", action: any) => {
   switch (action.type) {
     case "SetInputValue":
       return action.payload;
