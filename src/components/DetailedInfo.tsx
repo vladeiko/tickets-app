@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
 import Err404 from "./404";
 
-const DetailedInfo = (props) => {
-  const ticketList = useSelector((state) => state.ticketsReducer.tickets);
+const DetailedInfo = (props: any) => {
+  const ticketList = useSelector((state: any) => state.ticketsReducer.tickets);
 
   const currentTicket = ticketList
     ? ticketList.find(
-        (item) => item.ticketId.toString() === props.match.params.ticketId
+        (item: any) => item.ticketId.toString() === props.match.params.ticketId
       )
     : null;
 

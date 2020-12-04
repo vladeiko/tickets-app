@@ -6,13 +6,13 @@ import { useSelector } from "react-redux";
 const FindBar = () => {
   const dispatch = useDispatch();
 
-  const inputValue = useSelector((state) => state.inputReducer);
+  const inputValue = useSelector((state: any) => state.inputReducer);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     dispatch(setInputValue(e.target.value));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     dispatch(setFilter(inputValue));
   };

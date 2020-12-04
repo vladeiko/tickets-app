@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleStatus } from "../actions/index";
 
-const Ticket = ({ ticket }) => {
+const Ticket = ({ ticket }: any) => {
   const dispatch = useDispatch();
 
   const status = () => {

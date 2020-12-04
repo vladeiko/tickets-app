@@ -8,19 +8,20 @@ import FindBar from "./FindBar";
 const TicketList = () => {
   const dispatch = useDispatch();
 
-  const list = useSelector((state) => state.ticketsReducer.tickets);
-  const filter = useSelector((state) => state.filterReducer);
+  const list = useSelector((state: any) => state.ticketsReducer.tickets);
+  const filter = useSelector((state: any) => state.filterReducer);
 
-  const currentList = list.filter((ticket) =>
+  const currentList = list.filter((ticket: any) =>
     (ticket.owner.firstName + " " + ticket.owner.lastName).includes(filter)
   );
 
-  useEffect(async () => {
-    const { data } = await axios.get(
-      "https://raw.githubusercontent.com/Tapify/public-code-test/master/web-ui-test/tickets.json"
-    );
-    dispatch(importList(data));
-  }, []);
+  useEffect(() => {
+    const imporTicketList = async () => {
+      const { data } = await axios.get("http://localhost:3001/posts/");
+      dispatch(importList(data));
+    };
+    imporTicketList();
+  }, [dispatch]);
 
   return (
     <div className="main-list">
@@ -33,7 +34,7 @@ const TicketList = () => {
           <div className="header-text">STATUS</div>
         </div>
         {currentList ? (
-          currentList.map((ticket) => (
+          currentList.map((ticket: any) => (
             <Ticket ticket={ticket} key={ticket.ticketId} />
           ))
         ) : (
